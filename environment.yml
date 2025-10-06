@@ -8,8 +8,7 @@ dependencies:
   - numpy
   - scikit-learn
   - matplotlib
+  - pyautogui
   - pip
   - pip:
-    - mediapipe
-    - pyautogui
-    - opencv-python
+      - mediapipe
