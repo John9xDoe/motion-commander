@@ -3,6 +3,7 @@ import mediapipe as mp
 import pickle
 
 import numpy as np
+from controller import get_command
 
 model_dict = pickle.load(open('./model.p', 'rb'))
 model = model_dict['model']
@@ -57,6 +58,8 @@ while True:
             cv2.putText(frame, str(prediction), (x1 - 10, y1 - 20), cv2.FONT_HERSHEY_SIMPLEX, 1.5, (0, 255, 0), 1, cv2.LINE_AA)
             cv2.rectangle(frame, (x1, y1), (x2, y2), (0, 0, 0), 4)
             print(prediction)
+
+            get_command(command=prediction[0])
 
         except:
             continue
