@@ -1,0 +1,15 @@
+name: motion-commander
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.9
+  - opencv
+  - numpy
+  - scikit-learn
+  - matplotlib
+  - pip
+  - pip:
+    - mediapipe
+    - pyautogui
+    - opencv-python
